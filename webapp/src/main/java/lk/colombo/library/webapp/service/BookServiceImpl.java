@@ -13,26 +13,26 @@ import java.util.List;
 public class BookServiceImpl implements BookService {
 
     @Autowired
-    private BookRepository bookDao;
+    private BookRepository bookRepository;
 
     @Override
     public List<Book> getAllBooks() {
-        return bookDao.findAll();
+        return bookRepository.findAll();
     }
 
     @Override
     public Book findById(String id) {
-        return bookDao.findOne(id);
+        return bookRepository.findOne(id);
     }
 
 //    @Override
 //    public Book findByName(String name) {
-//        return bookDao.findByName(name);
+//        return bookRepository.findByName(name);
 //    }
 
     @Override
     public void saveBook(Book book) {
-        bookDao.save(book);
+        bookRepository.save(book);
     }
 
 //    @Override
@@ -42,12 +42,12 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBookById(String id) {
-        bookDao.delete(id);
+        bookRepository.delete(id);
     }
 
 //    @Override
 //    public void deleteAllBooks() {
-//        bookDao.deleteAll();
+//        bookRepository.deleteAll();
 //    }
 
     @Override

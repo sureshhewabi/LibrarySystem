@@ -14,21 +14,21 @@ import java.util.List;
 public class BorrowalServiceImpl implements BorrowalService{
 
     @Autowired
-    private BorrowalRepository borrowalDao;
+    private BorrowalRepository borrowalRepository;
 
     @Override
     public List<Borrowal> getAllBorrowals() {
-        return borrowalDao.findAll();
+        return borrowalRepository.findAll();
     }
 
     @Override
     public Borrowal findById(Long id) {
-        return borrowalDao.findOne(id);
+        return borrowalRepository.findOne(id);
     }
 
     @Override
     public void saveBorrowal(Borrowal borrowal) {
-        borrowalDao.save(borrowal);
+        borrowalRepository.save(borrowal);
     }
 
     @Override

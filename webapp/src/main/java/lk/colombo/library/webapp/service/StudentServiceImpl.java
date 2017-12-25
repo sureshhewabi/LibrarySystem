@@ -12,26 +12,26 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService{
 
     @Autowired
-    private StudentRepository studentDao;
+    private StudentRepository studentRepository;
 
     @Override
     public List<Student> getAllStudents() {
-        return studentDao.findAll();
+        return studentRepository.findAll();
     }
 
     @Override
     public Student findById(String id) {
-        return studentDao.findOne(id);
+        return studentRepository.findOne(id);
     }
 
 //    @Override
 //    public Student findByName(String name) {
-//        return studentDao.findByName(name);
+//        return studentRepository.findByName(name);
 //    }
 
     @Override
     public void saveStudent(Student student) {
-        studentDao.save(student);
+        studentRepository.save(student);
     }
 
 //    @Override
@@ -41,12 +41,12 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public void deleteStudentById(String id) {
-        studentDao.delete(id);
+        studentRepository.delete(id);
     }
 
 //    @Override
 //    public void deleteAllStudents() {
-//        studentDao.deleteAll();
+//        studentRepository.deleteAll();
 //    }
 
     @Override
