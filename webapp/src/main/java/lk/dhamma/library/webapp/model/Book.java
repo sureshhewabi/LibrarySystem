@@ -22,7 +22,7 @@ public class Book {
     private String source;
     private Double category;
     private String notes;
-//    @JsonBackReference
+    @JsonBackReference
     @OneToMany(mappedBy = "book")
     private List<Borrowal> borrowals;
 

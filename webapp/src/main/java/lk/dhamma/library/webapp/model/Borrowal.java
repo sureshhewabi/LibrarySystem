@@ -21,11 +21,11 @@ public class Borrowal {
     private Double finePaid;
     @ManyToOne
     @JoinColumn (name="student_id")
-//    @JsonManagedReference
+    @JsonManagedReference
     private Student student;
     @ManyToOne
     @JoinColumn (name="book_id")
-//    @JsonManagedReference
+    @JsonManagedReference
     private Book book;
 
     public Borrowal() {
