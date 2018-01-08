@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  contextPath: /LibraryApp/api/v1
+---
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/library?useSSL=false
+    username: root
+    password: root
+  jpa:
+    generate-ddl: false
+    show-sql: true
+
