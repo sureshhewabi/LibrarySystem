@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Configuration
-public class CORSFilter implements Filter{
+public class CORSFilter implements javax.servlet.Filter{
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
